@@ -1,6 +1,6 @@
-# Programmieren mit Java (TIx25)
+# Programmieren mit Java (TIK25)
 
-Dieses Repo beinhaltet sämtlichen Quellcode zu allen Demos sowie alle relevanten Informationen der Vorlesung _Programmieren mit Java_ des Kurses TIx25.
+Dieses Repo beinhaltet sämtlichen Quellcode zu allen Demos sowie alle relevanten Informationen der Vorlesung _Programmieren mit Java_ des Kurses TIK25.
 
 ## Links
 
