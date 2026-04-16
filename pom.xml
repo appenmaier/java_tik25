@@ -6,8 +6,8 @@
    <groupId>edu.jappuccini</groupId>
    <artifactId>demos</artifactId>
    <version>0.0.1-SNAPSHOT</version>
-   <name>TIA25</name>
-   <description>TIA25</description>
+   <name>TIK25</name>
+   <description>TIK25</description>
 
    <properties>
       <!-- Java-Version -->
