@@ -13,7 +13,7 @@ Dieses Repo beinhaltet sämtlichen Quellcode zu allen Demos sowie alle relevante
 ## Skript
 
 - [Termin 1, 16.04.2026: Programmieren, Git, Maven, Grundlegende imperative Sprachelemente in Java](skript/lecture01.md)
-- [Termin 2, 21.04.2026: folgt](skript/lecture02.md)
+- [Termin 2, 21.04.2026: Objektorientierte Programmierung, Klassen](skript/lecture02.md)
 - [Termin 3, 27.04.2026: folgt](skript/lecture03.md)
 - [Termin 4, 29.04.2026: folgt](skript/lecture04.md)
 - [Termin 5, 07.05.2026: folgt](skript/lecture05.md)
