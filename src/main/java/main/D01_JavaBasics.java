@@ -16,6 +16,7 @@ public class D01_JavaBasics {
     * 
     * @param args input arguments
     */
+   @SuppressWarnings("resource")
    public static void main(String[] args) {
       /* Datenobjekte und Datentypen */
       String firstName;
@@ -110,6 +111,44 @@ public class D01_JavaBasics {
       for (int i = 0; i < 10; i++) {
          System.out.println(i + 1);
       }
+
+      while (true) {
+         System.out.print("Nochmal ne Runde?: ");
+         if (scanner.next().equals("nein")) {
+            break;
+         }
+      }
+
+      /* Arrays */
+      String[] names = new String[3];
+
+      names[0] = "Max";
+      names[1] = "Lisa";
+      names[2] = "Hans";
+
+      int[] numbers = {4, 7, 1, 1, 8, 0, -4, 2};
+
+      numbers[1] = -7;
+
+      for (int i = 0; i < names.length; i++) {
+         String name = names[i];
+         System.out.println(name);
+      }
+
+      String hobbiesText = "Fußball;Zocken;Backen";
+      String[] hobbies = hobbiesText.split(";");
+
+      for (String hobby : hobbies) {
+         System.out.println(hobby);
+      }
+
+      System.out.println(hobbies[0] == "Fußball");
+      System.out.println("Fußball" == "Fußball");
+      System.out.println(new String("Fußball") == "Fußball");
+
+      System.out.println(hobbies[0].equals("Fußball"));
+      System.out.println("Fußball".equals("Fußball"));
+      System.out.println(new String("Fußball").equals("Fußball"));
    }
 
 }
