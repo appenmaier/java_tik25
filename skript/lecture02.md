@@ -1,6 +1,6 @@
 # Termin 2, 21.04.2026
 
-# Objektorientierte Programmierung
+# Objektorientierte Programmierung und Klassen
 
 **Abbildungen**
 
