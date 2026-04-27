@@ -16,7 +16,7 @@
 - [Doku: Programmieren](https://jappuccini.github.io/java-docs/production/documentation/coding)
 - [Doku: Die Programmiersprache Java](https://jappuccini.github.io/java-docs/production/documentation/java)
 
-## Git und Maven
+## Git
 
 **Abbildungen**
 
@@ -26,8 +26,6 @@
 
 - [Doku: Git](https://jappuccini.github.io/java-docs/production/additional-material/tools/git)
 - [Anleitung: Arbeiten mit Git](https://jappuccini.github.io/java-docs/production/additional-material/instructions/git)
-- [Doku: Maven](https://jappuccini.github.io/java-docs/production/additional-material/tools/maven)
-- [Anleitung: Arbeiten mit Maven](https://jappuccini.github.io/java-docs/production/additional-material/instructions/maven)
 
 ## Grundlegende imperative Sprachelemente in Java
 
