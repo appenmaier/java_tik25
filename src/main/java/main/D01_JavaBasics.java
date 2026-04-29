@@ -3,18 +3,31 @@ package main;
 import java.util.Scanner;
 
 /**
- * Java Basics
+ * Demo 1: Java Basics.
+ *
+ * <p>Demonstrates fundamental imperative Java concepts:
+ * <ul>
+ *   <li>Primitive and reference data types</li>
+ *   <li>Reading user input via {@link java.util.Scanner}</li>
+ *   <li>Comparison and logical operators</li>
+ *   <li>Conditional statements ({@code if}/{@code else}, ternary, {@code switch})</li>
+ *   <li>Loops ({@code while}, {@code do-while}, {@code for}, enhanced {@code for})</li>
+ *   <li>Arrays and {@link String} operations</li>
+ * </ul>
  *
  * @author Daniel Appenmaier
  * @version 1.0
- *
  */
 public class D01_JavaBasics {
 
    /**
-    * main method of Java Basics class
-    * 
-    * @param args input arguments
+    * Entry point of the Java Basics demo.
+    *
+    * <p>Reads several user inputs from {@code stdin}, performs string and numeric operations,
+    * evaluates conditional expressions, iterates with various loop constructs, and demonstrates
+    * array usage including reference vs. value equality of strings.
+    *
+    * @param args command-line arguments (not used)
     */
    @SuppressWarnings("resource")
    public static void main(String[] args) {

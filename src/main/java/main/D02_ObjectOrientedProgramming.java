@@ -13,16 +13,39 @@ import model.TableLight;
 import utility.StringArrayHelper;
 
 /**
- * Object Oriented Programming
+ * Demo 2: Object-Oriented Programming.
+ *
+ * <p>
+ * Demonstrates core OOP concepts in Java:
+ * <ul>
+ * <li>Creating and working with objects and their attributes</li>
+ * <li>Calling static and instance methods</li>
+ * <li>Object identity vs. structural equality ({@code equals})</li>
+ * <li>Three equivalent representations of a data class: traditional ({@link model.Person}), Java
+ * Record ({@link model.PersonRecord}), and Lombok-generated ({@link model.PersonLombok})</li>
+ * </ul>
  *
  * @author Daniel Appenmaier
  * @version 1.0
- *
  */
 public class D02_ObjectOrientedProgramming {
 
+   /**
+    * Mathematical constant Pi used for geometric calculations.
+    */
    public final static double PI = 3.14;
 
+   /**
+    * Entry point of the Object-Oriented Programming demo.
+    *
+    * <p>
+    * Instantiates various model objects ({@link model.Flight}, {@link model.FlightConnection},
+    * {@link model.LightBulb}, {@link model.TableLight}, {@link model.Person},
+    * {@link model.PersonRecord}, {@link model.PersonLombok}), manipulates their state, and prints
+    * results to demonstrate equality, {@code toString}, and getter/setter patterns.
+    *
+    * @param args command-line arguments (not used)
+    */
    public static void main(String[] args) {
       /* Attribute */
       FlightConnection connection1 = new FlightConnection();
@@ -65,6 +88,7 @@ public class D02_ObjectOrientedProgramming {
       System.out.println(redLightBulb);
       System.out.println(light1);
 
+      /* Datenklassen */
       Person person1 = new Person("Hans", 16, 'm');
       Person person2 = new Person("Hans", 16, 'm');
       Person person3 = new Person("Lisa", 29, 'w');

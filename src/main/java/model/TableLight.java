@@ -10,8 +10,13 @@ package model;
  */
 public class TableLight {
 
+   /** Whether this table light is plugged into a power source. */
    private boolean isConnected;
+
+   /** Whether this table light's switch is in the on position. */
    private boolean isOn;
+
+   /** The light bulb currently installed in this table light, or {@code null} if none. */
    private LightBulb lightBulb;
 
    /**
