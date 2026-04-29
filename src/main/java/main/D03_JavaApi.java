@@ -11,11 +11,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 import model.Person;
+import model.PlugType;
+import model.TableLight;
 
 /**
- * Demonstrates selected Java API features: math operations, random number generation,
- * date/time API, {@link java.util.LinkedList}, file I/O with {@link Scanner}, and
- * wrapper classes.
+ * Demonstrates selected Java API features: math operations, random number generation, date/time
+ * API, {@link java.util.LinkedList}, file I/O with {@link Scanner}, wrapper classes, and
+ * enum usage with {@link model.PlugType} and {@link model.TableLight}.
  *
  * @author Daniel Appenmaier
  * @version 1.0
@@ -25,6 +27,19 @@ public class D03_JavaApi {
 
    /**
     * Entry point — runs all API demos sequentially.
+    *
+    * <p>Covers:
+    * <ul>
+    *   <li>Integer and floating-point arithmetic, casting, and {@link Math#sqrt}</li>
+    *   <li>Pseudo-random numbers via {@link Random#nextInt(int, int)}</li>
+    *   <li>Date/time via {@link java.time.LocalDate}, {@link java.time.LocalTime}, and
+    *       {@link java.time.LocalDateTime}</li>
+    *   <li>List operations with {@link java.util.LinkedList}</li>
+    *   <li>File I/O with {@link Scanner} and CSV parsing into {@link model.Person} objects</li>
+    *   <li>Wrapper classes ({@link Integer#parseInt}, {@link Boolean#parseBoolean},
+    *       autoboxing)</li>
+    *   <li>Enum usage with {@link model.PlugType} and {@link model.TableLight}</li>
+    * </ul>
     *
     * @param args command-line arguments (not used)
     * @throws FileNotFoundException if {@code src/main/resources/persons.txt} cannot be found
@@ -61,6 +76,7 @@ public class D03_JavaApi {
       LocalDate now = LocalDate.now();
       System.out.println(now.getDayOfYear());
       System.out.println(now);
+      System.out.println(now.getMonth());
 
       LocalTime time = LocalTime.now();
       System.out.println(time);
@@ -120,6 +136,23 @@ public class D03_JavaApi {
       scanner.close();
       int z = Integer.valueOf("8");
       Integer k = 5;
+
+      /* Enumerationen */
+      PlugType typeF = PlugType.TYPE_F;
+      PlugType typeI = PlugType.TYPE_I;
+
+      TableLight light1 = new TableLight();
+      TableLight light2 = new TableLight(typeF);
+
+      ArrayList<TableLight> lights = new ArrayList<>();
+      lights.add(light1);
+      lights.add(light2);
+
+      for (TableLight l : lights) {
+         if (l.getPlugType().equals(PlugType.TYPE_F)) {
+            System.out.println("Hurra");
+         }
+      }
    }
 
 }

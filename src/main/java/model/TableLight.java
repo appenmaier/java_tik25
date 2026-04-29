@@ -1,13 +1,21 @@
 package model;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 /**
  * Represents a table light that can be connected, switched on or off, and equipped with a light
  * bulb.
+ *
+ * <p>A {@code TableLight} has an immutable {@link PlugType} that is set at construction time.
+ * The no-arg constructor defaults to {@link PlugType#TYPE_F} (European Schuko).
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
+@ToString
+@EqualsAndHashCode
 public class TableLight {
 
    /** Whether this table light is plugged into a power source. */
@@ -18,6 +26,29 @@ public class TableLight {
 
    /** The light bulb currently installed in this table light, or {@code null} if none. */
    private LightBulb lightBulb;
+
+   /**
+    * The plug type of this table light. Immutable after construction.
+    *
+    * @see PlugType
+    */
+   private final PlugType plugType;
+
+   /**
+    * Creates a table light with the default plug type {@link PlugType#TYPE_F}.
+    */
+   public TableLight() {
+      plugType = PlugType.TYPE_F;
+   }
+
+   /**
+    * Creates a table light with the given plug type.
+    *
+    * @param plugType the plug type of this table light
+    */
+   public TableLight(PlugType plugType) {
+      this.plugType = plugType;
+   }
 
    /**
     * Connects the Table Light to the power source.
@@ -95,6 +126,15 @@ public class TableLight {
     */
    public LightBulb getLightBulb() {
       return lightBulb;
+   }
+
+   /**
+    * Returns the plug type of this table light.
+    *
+    * @return the {@link PlugType} of this table light
+    */
+   public PlugType getPlugType() {
+      return plugType;
    }
 
 }
