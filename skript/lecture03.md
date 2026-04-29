@@ -24,7 +24,7 @@
 - [Doku: Die Mutter aller Klassen](https://jappuccini.github.io/java-docs/production/documentation/object)
 - [Demo: D02_ObjectOrientedProgramming](../src/main/java/main/D02_ObjectOrientedProgramming.java)
 
-- ## Datenklassen, Maven und Lombok
+## Datenklassen, Maven und Lombok
 
 **Abbildungen**
 
