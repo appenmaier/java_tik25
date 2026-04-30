@@ -40,8 +40,6 @@
 - [Doku: Datenobjekte](https://jappuccini.github.io/java-docs/production/documentation/data-objects)
 - [Doku: Zeichenketten (Strings)](https://jappuccini.github.io/java-docs/production/documentation/strings)
 - [Doku: Operatoren](https://jappuccini.github.io/java-docs/production/documentation/operators)
-- [Doku: Mathematische Berechnungen](https://jappuccini.github.io/java-docs/production/documentation/calculations)
-- [Doku: Pseudozufallszahlen](https://jappuccini.github.io/java-docs/production/documentation/pseudo-random-numbers)
 - [Doku: Konsolenanwendungen](https://jappuccini.github.io/java-docs/production/documentation/console-applications)
 - [Doku: Verzweigungen und Fallunterscheidungen](https://jappuccini.github.io/java-docs/production/documentation/cases)
 - [Doku: Schleifen](https://jappuccini.github.io/java-docs/production/documentation/loops)
