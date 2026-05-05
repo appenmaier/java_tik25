@@ -14,9 +14,9 @@ public class StringArrayHelper {
    private StringArrayHelper() {}
 
    /**
-    * Prints the given String array.
-    * 
-    * @param array given String array
+    * Prints each element of the given {@code String} array to standard output on its own line.
+    *
+    * @param array the array whose elements are printed; must not be {@code null}
     */
    public static void print(String[] array) {
       for (String element : array) {

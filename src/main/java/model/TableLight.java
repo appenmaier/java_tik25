@@ -81,8 +81,8 @@ public class TableLight {
    /**
     * Replaces the current light bulb with a new one and returns the old one.
     *
-    * @param newLightBulb the new light bulb
-    * @return the old light bulb
+    * @param newLightBulb the new light bulb to install
+    * @return the previously installed {@link LightBulb}, or {@code null} if none was installed
     */
    public LightBulb changeLightBulb(LightBulb newLightBulb) {
       LightBulb oldLightBulb = null;
@@ -95,7 +95,7 @@ public class TableLight {
     * Returns whether the Table Light is currently shining. The Table Light is shining if it is
     * connected and on and has a light bulb.
     *
-    * @return true if the Table Light is shining, false otherwise
+    * @return {@code true} if the Table Light is shining, {@code false} otherwise
     */
    public boolean isShining() {
       return isConnected && isOn && lightBulb != null;
@@ -104,7 +104,7 @@ public class TableLight {
    /**
     * Returns whether the Table Light is connected to a power source.
     *
-    * @return true if connected, false otherwise
+    * @return {@code true} if connected, {@code false} otherwise
     */
    public boolean isConnected() {
       return isConnected;
@@ -113,7 +113,7 @@ public class TableLight {
    /**
     * Returns whether the Table Light is turned on.
     *
-    * @return true if on, false otherwise
+    * @return {@code true} if on, {@code false} otherwise
     */
    public boolean isOn() {
       return isOn;
@@ -122,7 +122,7 @@ public class TableLight {
    /**
     * Returns the current light bulb of the Table Light.
     *
-    * @return the current light bulb, or null if none is installed
+    * @return the currently installed {@link LightBulb}, or {@code null} if none is installed
     */
    public LightBulb getLightBulb() {
       return lightBulb;
