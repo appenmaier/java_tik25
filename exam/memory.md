@@ -7,7 +7,7 @@ Bei Teamarbeit ist darauf zu achten, dass die Beiträge beider Partner im Code (
 ## Projektauftrag
 Entwickle ein Java-basiertes Memory-Spiel für maximal zwei Spieler.
 Das System muss die Logik strikt von der Anzeige trennen (**MVC-Pattern**).
-Zusätzlich zur ausführbaren Anwendung muss ein **UML-Klassendiagramm** sowie eine **JavaDoc-Dokumentation** erstellt und abgegeben werden.
+Zusätzlich zur ausführbaren Anwendung muss ein **UML-Klassendiagramm** sowie eine aussagekräftige **JavaDoc-Dokumentation** erstellt und abgegeben werden.
 
 ## Funktionale Anforderungen
 
