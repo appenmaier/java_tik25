@@ -22,4 +22,5 @@ Dieses Repo beinhaltet sämtlichen Quellcode zu allen Demos sowie alle relevante
 
 ## Prüfungsleistung
 
-_folgt_
+- [Aufgabenstellung für 1-2 Studierende: Memory](exam/memory.md)
+- [Aufgabenstellung für 3-4 Studierende: Skyjo](exam/skyjo.md)
