@@ -2,7 +2,7 @@
 
 ## Organisatorischer Rahmen
 Die Bearbeitung dieser Aufgabe erfolgt in einem Team von drei bis vier Studierenden. 
-Bei Teamarbeit ist darauf zu achten, dass die Beiträge beider Partner im Code (z. B. durch Autoren-Tags in der JavaDoc) ersichtlich sind.
+Bei Teamarbeit ist darauf zu achten, dass die Beiträge aller Partner im Code (z. B. durch Autoren-Tags in der JavaDoc) ersichtlich sind.
 Eine gleichmäßige Verteilung der Arbeitslast wird vorausgesetzt.
 
 ## Projektauftrag
