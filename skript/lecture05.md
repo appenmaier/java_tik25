@@ -9,7 +9,7 @@
 **Links**
 
 - [Doku: Vererbung](https://jappuccini.github.io/java-docs/production/documentation/inheritance)
-- [Demo: D04_Inheritance](../../src/main/java/main/D04_Inheritance.java)
+- [Demo: D04_Inheritance](../src/main/java/main/D04_Inheritance.java)
 
 ## (Dynamische) Polymorphie
 
@@ -23,7 +23,7 @@
 **Links**
 
 - [Doku: (Dynamische) Polymorphie](https://jappuccini.github.io/java-docs/production/documentation/polymorphism)
-- [Demo: D04_Inheritance](../../src/main/java/main/D04_Inheritance.java)
+- [Demo: D04_Inheritance](../src/main/java/main/D04_Inheritance.java)
 
 ## Abstrakte und finale Klassen und Methoden
 
@@ -34,7 +34,7 @@
 **Links**
 
 - [Doku: Abstrakte und finale Klassen und Methoden](https://jappuccini.github.io/java-docs/production/documentation/abstract-and-final)
-- [Demo: D04_Inheritance](../../src/main/java/main/D04_Inheritance.java)
+- [Demo: D04_Inheritance](../src/main/java/main/D04_Inheritance.java)
 
 ## Schnittstellen (Interfaces) und Listen
 
@@ -49,6 +49,6 @@
 
 - [Doku: Schnittstellen (Interfaces)](https://jappuccini.github.io/java-docs/production/documentation/interfaces)
 - [Doku: Listen](https://jappuccini.github.io/java-docs/production/documentation/lists)
-- [Demo: D04_Inheritance](../../src/main/java/main/D04_Inheritance.java)
+- [Demo: D04_Inheritance](../src/main/java/main/D04_Inheritance.java)
 
 
