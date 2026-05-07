@@ -7,22 +7,23 @@ import lombok.ToString;
  * Represents a table light that can be connected, switched on or off, and equipped with a light
  * bulb.
  *
- * <p>A {@code TableLight} has an immutable {@link PlugType} that is set at construction time.
- * The no-arg constructor defaults to {@link PlugType#TYPE_F} (European Schuko).
+ * <p>
+ * A {@code TableLight} has an immutable {@link PlugType} that is set at construction time. The
+ * no-arg constructor defaults to {@link PlugType#TYPE_F} (European Schuko).
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
 @ToString
-@EqualsAndHashCode
-public class TableLight {
+@EqualsAndHashCode(callSuper = true)
+public class TableLight extends Light implements WiredDevice {
 
    /** Whether this table light is plugged into a power source. */
    private boolean isConnected;
 
-   /** Whether this table light's switch is in the on position. */
-   private boolean isOn;
+   // /** Whether this table light's switch is in the on position. */
+   // private boolean isOn;
 
    /** The light bulb currently installed in this table light, or {@code null} if none. */
    private LightBulb lightBulb;
@@ -39,6 +40,7 @@ public class TableLight {
     */
    public TableLight() {
       plugType = PlugType.TYPE_F;
+      lightBulb = new LightBulb("weiß");
    }
 
    /**
@@ -53,6 +55,7 @@ public class TableLight {
    /**
     * Connects the Table Light to the power source.
     */
+   @Override
    public void plugIn() {
       isConnected = true;
    }
@@ -60,23 +63,26 @@ public class TableLight {
    /**
     * Disconnects the Table Light from the power source.
     */
+   @Override
    public void pullThePlug() {
       isConnected = false;
    }
 
-   /**
-    * Turns the Table Light on.
-    */
-   public void switchOn() {
-      isOn = true;
-   }
+   // /**
+   // * Turns the Table Light on.
+   // */
+   // @Override
+   // public void switchOn() {
+   // isOn = true;
+   // }
 
-   /**
-    * Turns the Table Light off.
-    */
-   public void switchOff() {
-      isOn = false;
-   }
+   // /**
+   // * Turns the Table Light off.
+   // */
+   // @Override
+   // public void switchOff() {
+   // isOn = false;
+   // }
 
    /**
     * Replaces the current light bulb with a new one and returns the old one.
@@ -97,6 +103,7 @@ public class TableLight {
     *
     * @return {@code true} if the Table Light is shining, {@code false} otherwise
     */
+   @Override
    public boolean isShining() {
       return isConnected && isOn && lightBulb != null;
    }
@@ -110,14 +117,15 @@ public class TableLight {
       return isConnected;
    }
 
-   /**
-    * Returns whether the Table Light is turned on.
-    *
-    * @return {@code true} if on, {@code false} otherwise
-    */
-   public boolean isOn() {
-      return isOn;
-   }
+   // /**
+   // * Returns whether the Table Light is turned on.
+   // *
+   // * @return {@code true} if on, {@code false} otherwise
+   // */
+   // @Override
+   // public boolean isOn() {
+   // return isOn;
+   // }
 
    /**
     * Returns the current light bulb of the Table Light.
