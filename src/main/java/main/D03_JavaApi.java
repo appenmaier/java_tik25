@@ -16,8 +16,8 @@ import model.TableLight;
 
 /**
  * Demonstrates selected Java API features: math operations, random number generation, date/time
- * API, {@link java.util.LinkedList}, file I/O with {@link Scanner}, wrapper classes, and
- * enum usage with {@link model.PlugType} and {@link model.TableLight}.
+ * API, {@link java.util.LinkedList}, file I/O with {@link Scanner}, wrapper classes, and enum usage
+ * with {@link model.PlugType} and {@link model.TableLight}.
  *
  * @author Daniel Appenmaier
  * @version 1.0
@@ -28,17 +28,17 @@ public class D03_JavaApi {
    /**
     * Entry point — runs all API demos sequentially.
     *
-    * <p>Covers:
+    * <p>
+    * Covers:
     * <ul>
-    *   <li>Integer and floating-point arithmetic, casting, and {@link Math#sqrt}</li>
-    *   <li>Pseudo-random numbers via {@link Random#nextInt(int, int)}</li>
-    *   <li>Date/time via {@link java.time.LocalDate}, {@link java.time.LocalTime}, and
-    *       {@link java.time.LocalDateTime}</li>
-    *   <li>List operations with {@link java.util.LinkedList}</li>
-    *   <li>File I/O with {@link Scanner} and CSV parsing into {@link model.Person} objects</li>
-    *   <li>Wrapper classes ({@link Integer#parseInt}, {@link Boolean#parseBoolean},
-    *       autoboxing)</li>
-    *   <li>Enum usage with {@link model.PlugType} and {@link model.TableLight}</li>
+    * <li>Integer and floating-point arithmetic, casting, and {@link Math#sqrt}</li>
+    * <li>Pseudo-random numbers via {@link Random#nextInt(int, int)}</li>
+    * <li>Date/time via {@link java.time.LocalDate}, {@link java.time.LocalTime}, and
+    * {@link java.time.LocalDateTime}</li>
+    * <li>List operations with {@link java.util.LinkedList}</li>
+    * <li>File I/O with {@link Scanner} and CSV parsing into {@link model.Person} objects</li>
+    * <li>Wrapper classes ({@link Integer#parseInt}, {@link Boolean#parseBoolean}, autoboxing)</li>
+    * <li>Enum usage with {@link model.PlugType} and {@link model.TableLight}</li>
     * </ul>
     *
     * @param args command-line arguments (not used)
@@ -101,6 +101,22 @@ public class D03_JavaApi {
          String name = names.get(x);
          System.out.println(name);
       }
+
+      /* Performancemessungen */
+      ArrayList<Integer> numbers = new ArrayList<>();
+
+      long start = System.currentTimeMillis();
+      for (int x = 0; x < 250_000; x++) {
+         numbers.add(0, random.nextInt(1, 7));
+      }
+      long end = System.currentTimeMillis();
+      System.out.println("Laufzeit (Hinzufügen): " + (end - start) + "ms");
+      start = System.currentTimeMillis();
+      for (int x = 0; x < 250_000; x++) {
+         numbers.get(x);
+      }
+      end = System.currentTimeMillis();
+      System.out.println("Laufzeit (Lesen): " + (end - start) + "ms");
 
       /* Lesen von Dateien und Wrapper-Klassen */
       System.out.println(System.getProperty("user.dir"));

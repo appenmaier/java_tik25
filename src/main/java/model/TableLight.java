@@ -15,9 +15,9 @@ import lombok.ToString;
  * @version 1.0
  *
  */
-@ToString
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-public class TableLight extends Light implements WiredDevice {
+public class TableLight extends Light implements WiredDevice, Comparable<TableLight> {
 
    /** Whether this table light is plugged into a power source. */
    private boolean isConnected;
@@ -56,7 +56,11 @@ public class TableLight extends Light implements WiredDevice {
     * Connects the Table Light to the power source.
     */
    @Override
-   public void plugIn() {
+   public void plugIn() throws AlreadyPluggedInException {
+      if (isConnected) {
+         throw new AlreadyPluggedInException("Already Plugged In");
+      }
+
       isConnected = true;
    }
 
@@ -143,6 +147,37 @@ public class TableLight extends Light implements WiredDevice {
     */
    public PlugType getPlugType() {
       return plugType;
+   }
+
+   /**
+    * Compares this table light to another by operational state in ascending order:
+    * unconnected &lt; connected &lt; switched on &lt; shining.
+    *
+    * @param o the other {@link TableLight} to compare to
+    * @return a positive integer if this light is in a more active state, negative if less active,
+    *         zero if both are in the same state
+    */
+   @Override
+   public int compareTo(TableLight o) {
+      if (isShining() && !o.isShining()) {
+         return 1;
+      } else if (!isShining() && o.isShining()) {
+         return -1;
+      }
+
+      if (isOn && !o.isOn) {
+         return 1;
+      } else if (!isOn && o.isOn) {
+         return -1;
+      }
+
+      if (isConnected && !o.isConnected) {
+         return 1;
+      } else if (!isConnected && o.isConnected) {
+         return -1;
+      }
+
+      return 0;
    }
 
 }

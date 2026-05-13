@@ -2,6 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
+import model.AlreadyPluggedInException;
 import model.FlashLight;
 import model.Light;
 import model.TableLight;
@@ -11,11 +12,15 @@ import model.WiredDevice;
 /**
  * Demonstrates inheritance, polymorphism, downcasting, and interface usage in Java.
  *
- * <p>Shows three scenarios:
+ * <p>
+ * Shows three scenarios:
  * <ol>
- *   <li>Working with concrete lists of {@link TableLight} and {@link FlashLight} without polymorphism.</li>
- *   <li>Using a shared {@link Light} base-type list with upcasting, dynamic dispatch, and pattern-matching downcasts.</li>
- *   <li>Using the {@link WiredDevice} interface to group unrelated pluggable devices ({@link TableLight}, {@link Toaster}).</li>
+ * <li>Working with concrete lists of {@link TableLight} and {@link FlashLight} without
+ * polymorphism.</li>
+ * <li>Using a shared {@link Light} base-type list with upcasting, dynamic dispatch, and
+ * pattern-matching downcasts.</li>
+ * <li>Using the {@link WiredDevice} interface to group unrelated pluggable devices
+ * ({@link TableLight}, {@link Toaster}).</li>
  * </ol>
  *
  * @author Daniel Appenmaier
@@ -29,7 +34,7 @@ public class D04_Inheritance {
     *
     * @param args command-line arguments (not used)
     */
-   public static void main(String[] args) {
+   public static void main(String[] args) throws AlreadyPluggedInException {
       /* Ansatz ohne Vererbung */
       ArrayList<TableLight> tableLights = new ArrayList<>();
 

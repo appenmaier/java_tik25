@@ -2,6 +2,7 @@ package main;
 
 import java.time.LocalDate;
 
+import model.AlreadyPluggedInException;
 import model.Flight;
 import model.FlightConnection;
 import model.LightBulb;
@@ -79,7 +80,14 @@ public class D02_ObjectOrientedProgramming {
 
       TableLight light1 = new TableLight();
       System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dunkel");
-      light1.plugIn();
+      try {
+         light1.plugIn();
+         System.out.println("Erstes Einstecken hat funktioniert");
+         light1.plugIn();
+         System.out.println("Zweites Einstecken hat funktioniert");
+      } catch (AlreadyPluggedInException e) {
+         System.err.println(e.getMessage());
+      }
       light1.switchOn();
       light1.changeLightBulb(blueLightBulb);
       System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dunkel");
