@@ -46,13 +46,13 @@ public class D03_JavaApi {
     */
    @SuppressWarnings("unused")
    public static void main(String[] args) throws FileNotFoundException {
-      /* Mathematische Berechnungen */
+      /* Mathematical calculations */
       int a = 5, b = 3;
 
       System.out.println(a + b);
       System.out.println(a - b);
       System.out.println(a * b);
-      System.out.println((a / b) + " Rest " + (a % b));
+      System.out.println((a / b) + " remainder " + (a % b));
       System.out.println((double) a / b);
 
       double d = 5;
@@ -60,7 +60,7 @@ public class D03_JavaApi {
 
       System.out.println(Math.sqrt(8));
 
-      /* Pseudozufallszahlen */
+      /* Pseudo-random numbers */
       Random random = new Random();
 
       for (int x = 0; x < 100; x++) {
@@ -68,7 +68,7 @@ public class D03_JavaApi {
          System.out.println(randomNumber);
       }
 
-      /* Datums- und Zeitangaben */
+      /* Date and time */
       long nowInMs = System.currentTimeMillis();
       System.out.println(nowInMs);
 
@@ -84,7 +84,7 @@ public class D03_JavaApi {
       LocalDateTime dateTime = LocalDateTime.now();
       System.out.println(dateTime);
 
-      /* Listen */
+      /* Lists */
       LinkedList<String> names = new LinkedList<>();
 
       names.add("Hans");
@@ -102,7 +102,7 @@ public class D03_JavaApi {
          System.out.println(name);
       }
 
-      /* Performancemessungen */
+      /* Performance measurements */
       ArrayList<Integer> numbers = new ArrayList<>();
 
       long start = System.currentTimeMillis();
@@ -110,15 +110,15 @@ public class D03_JavaApi {
          numbers.add(0, random.nextInt(1, 7));
       }
       long end = System.currentTimeMillis();
-      System.out.println("Laufzeit (Hinzufügen): " + (end - start) + "ms");
+      System.out.println("Runtime (adding): " + (end - start) + "ms");
       start = System.currentTimeMillis();
       for (int x = 0; x < 250_000; x++) {
          numbers.get(x);
       }
       end = System.currentTimeMillis();
-      System.out.println("Laufzeit (Lesen): " + (end - start) + "ms");
+      System.out.println("Runtime (reading): " + (end - start) + "ms");
 
-      /* Lesen von Dateien und Wrapper-Klassen */
+      /* Reading files and wrapper classes */
       System.out.println(System.getProperty("user.dir"));
       System.out.println(System.getProperty("file.separator"));
 
@@ -153,7 +153,7 @@ public class D03_JavaApi {
       int z = Integer.valueOf("8");
       Integer k = 5;
 
-      /* Enumerationen */
+      /* Enumerations */
       PlugType typeF = PlugType.TYPE_F;
       PlugType typeI = PlugType.TYPE_I;
 
@@ -166,7 +166,7 @@ public class D03_JavaApi {
 
       for (TableLight l : lights) {
          if (l.getPlugType().equals(PlugType.TYPE_F)) {
-            System.out.println("Hurra");
+            System.out.println("Hooray");
          }
       }
    }

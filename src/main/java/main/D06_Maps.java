@@ -31,35 +31,35 @@ public class D06_Maps {
    public static void main(String[] args) {
       HashMap<Student, Exam> studentsWithExam = new HashMap<>();
 
-      /* Wert setzen */
+      /* Set value */
       studentsWithExam.put(new Student("8172545", "Max"), new Exam(LocalDate.now(), 2.6));
       studentsWithExam.put(new Student("1920563", "Lisa"), new Exam(LocalDate.now(), 1.8));
       studentsWithExam.put(new Student("5528354", "Anna"), new Exam(LocalDate.now(), 3.5));
 
-      /* Schlüssel und Wert prüfen */
+      /* Check key and value */
       System.out.println(studentsWithExam.containsKey(new Student("1920563", "Lisa")));
       System.out.println(studentsWithExam.containsValue(new Exam(LocalDate.now(), 3.5)));
 
-      /* Wert auslesen */
+      /* Read value */
       System.out.println(studentsWithExam.get(new Student("1920563", "Lisa")));
 
-      /* Wert überschreiben */
+      /* Overwrite value */
       Exam oldExam =
             studentsWithExam.put(new Student("5528354", "Anna"), new Exam(LocalDate.now(), 3.0));
       System.out.println(studentsWithExam.get(new Student("5528354", "Anna")));
       System.out.println(oldExam);
 
-      /* Werte ausgeben */
+      /* Print values */
       System.out.println(studentsWithExam);
 
-      /* Datensammlungen: Die Menge aller Schlüssel */
+      /* Collections: The set of all keys */
       System.out.println();
-      System.out.println("Anwesenheitsliste:");
+      System.out.println("Attendance list:");
       for (Student s : studentsWithExam.keySet()) {
          System.out.println(s.getName() + " [ ]");
       }
 
-      /* Datensammlungen: Alle Werte */
+      /* Collections: All values */
       System.out.println();
       double total = 0;
       int grades = 0;
@@ -67,11 +67,11 @@ public class D06_Maps {
          total += e.getGrade();
          grades++;
       }
-      System.out.println("Durchschnittsnote: " + (total / grades));
+      System.out.println("Average grade: " + (total / grades));
 
-      /* Datensammlungen: Die Menge aller Schlüsse-Wert-Paare / Einträge */
+      /* Collections: The set of all key-value pairs / entries */
       System.out.println();
-      System.out.println("Notenliste: ");
+      System.out.println("Grade list: ");
       for (Entry<Student, Exam> entry : studentsWithExam.entrySet()) {
          Student s = entry.getKey();
          Exam e = entry.getValue();

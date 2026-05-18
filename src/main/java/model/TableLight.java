@@ -40,7 +40,7 @@ public class TableLight extends Light implements WiredDevice, Comparable<TableLi
     */
    public TableLight() {
       plugType = PlugType.TYPE_F;
-      lightBulb = new LightBulb("weiß");
+      lightBulb = new LightBulb("white");
    }
 
    /**

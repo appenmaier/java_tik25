@@ -31,7 +31,7 @@ public class D01_JavaBasics {
     */
    @SuppressWarnings("resource")
    public static void main(String[] args) {
-      /* Datenobjekte und Datentypen */
+      /* Data objects and data types */
       String firstName;
       String lastName;
       String firstNameAndLastName;
@@ -48,22 +48,22 @@ public class D01_JavaBasics {
 
       Scanner scanner = new Scanner(System.in);
 
-      System.out.print("Gib bitte Deinen Vornamen ein: ");
+      System.out.print("Please enter your first name: ");
       firstName = scanner.next();
 
-      System.out.print("Gib bitte Deinen Nachnamen ein: ");
+      System.out.print("Please enter your last name: ");
       lastName = scanner.next();
 
-      System.out.print("Gib bitte Dein Alter ein: ");
+      System.out.print("Please enter your age: ");
       age = scanner.nextInt();
 
-      System.out.print("Gib bitte Deine Größe in Meter ein: ");
+      System.out.print("Please enter your height in metres: ");
       sizeInM = scanner.nextDouble();
 
-      System.out.print("Gib bitte ein, ob Du glücklich bist (true, false): ");
+      System.out.print("Please enter whether you are happy (true, false): ");
       isHappy = scanner.nextBoolean();
 
-      System.out.print("Gib bitte Dein Geschlecht ein (w, m, d): ");
+      System.out.print("Please enter your gender (f, m, d): ");
       gender = scanner.next().charAt(0);
 
       firstNameAndLastName = firstName + " " + lastName;
@@ -77,38 +77,38 @@ public class D01_JavaBasics {
       System.out.println(firstNameAndLastName);
       System.out.printf("%S %S%n", firstName, lastName);
 
-      // Vergleichsoperatoren: <, <=, >, >=, ==, !=
-      // Logische Operatoren: UND (&&), ODER (||), VERNEINUNG (!)
+      // Comparison operators: <, <=, >, >=, ==, !=
+      // Logical operators: AND (&&), OR (||), NOT (!)
       if ((gender == 'm' || gender == 'M') && age >= 18) {
-         System.out.println("Hallo Herr " + lastName);
+         System.out.println("Hello Mr. " + lastName);
       } else if ((gender == 'w' || gender == 'W') && age >= 18) {
-         System.out.println("Hallo Frau " + lastName);
+         System.out.println("Hello Ms. " + lastName);
       } else {
-         System.out.println("Hallo " + firstName);
+         System.out.println("Hello " + firstName);
       }
 
       String happyText;
       if (isHappy) {
-         happyText = "glücklich";
+         happyText = "happy";
       } else {
-         happyText = "nicht glücklich";
+         happyText = "not happy";
       }
-      System.out.println("Du bist " + happyText);
+      System.out.println("You are " + happyText);
 
-      happyText = (isHappy) ? "glücklich" : "nicht glücklich";
-      System.out.println("Du bist " + happyText);
+      happyText = (isHappy) ? "happy" : "not happy";
+      System.out.println("You are " + happyText);
 
-      System.out.println("Du bist " + ((isHappy) ? "glücklich" : "nicht glücklich"));
+      System.out.println("You are " + ((isHappy) ? "happy" : "not happy"));
 
-      /* Fallunterscheidungen */
+      /* Conditional statements */
       System.out.println(switch (gender) {
-         case 'm', 'M' -> "männlich";
-         case 'w', 'W' -> "weiblich";
-         case 'd', 'D' -> "divers";
+         case 'm', 'M' -> "male";
+         case 'w', 'W' -> "female";
+         case 'd', 'D' -> "diverse";
          default       -> gender;
       });
 
-      /* Schleifen */
+      /* Loops */
       int x = 0;
       while (x < 10) {
          System.out.println(x + 1);
@@ -126,8 +126,8 @@ public class D01_JavaBasics {
       }
 
       while (true) {
-         System.out.print("Nochmal ne Runde?: ");
-         if (scanner.next().equals("nein")) {
+         System.out.print("Another round?: ");
+         if (scanner.next().equals("no")) {
             break;
          }
       }
@@ -148,20 +148,20 @@ public class D01_JavaBasics {
          System.out.println(name);
       }
 
-      String hobbiesText = "Fußball;Zocken;Backen";
+      String hobbiesText = "Soccer;Gaming;Baking";
       String[] hobbies = hobbiesText.split(";");
 
       for (String hobby : hobbies) {
          System.out.println(hobby);
       }
 
-      System.out.println(hobbies[0] == "Fußball");
-      System.out.println("Fußball" == "Fußball");
-      System.out.println(new String("Fußball") == "Fußball");
+      System.out.println(hobbies[0] == "Soccer");
+      System.out.println("Soccer" == "Soccer");
+      System.out.println(new String("Soccer") == "Soccer");
 
-      System.out.println(hobbies[0].equals("Fußball"));
-      System.out.println("Fußball".equals("Fußball"));
-      System.out.println(new String("Fußball").equals("Fußball"));
+      System.out.println(hobbies[0].equals("Soccer"));
+      System.out.println("Soccer".equals("Soccer"));
+      System.out.println(new String("Soccer").equals("Soccer"));
    }
 
 }
