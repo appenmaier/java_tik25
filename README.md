@@ -17,7 +17,7 @@ Dieses Repo beinhaltet sämtlichen Quellcode zu allen Demos sowie alle relevante
 - [Termin 3, 27.04.2026: Referenzen und Objekte, Die Object-Methoden, Datenklassen, Maven und Lombok](skript/lecture03.md)
 - [Termin 4, 29.04.2026: Die Java API, Klassendiagramme](skript/lecture04.md)
 - [Termin 5, 07.05.2026: Vererbung, (Dynamische) Polymorphie, Abstrakte und finale Klassen und Methoden, Schnittstellen (Interfaces), Listen](skript/lecture05.md)
-- [Termin 6, 13.05.2026: Sortieren von Objekten, Maps, Optionals](skript/lecture06.md)
+- [Termin 6, 13.05.2026: Sortieren von Objekten, Assoziativspeicher (Maps), Ausnahmen (Exceptions), Optionals](skript/lecture06.md)
 - [Termin 7, 21.05.2026: _folgt_](skript/lecture07.md)
 
 ## Prüfungsleistung
